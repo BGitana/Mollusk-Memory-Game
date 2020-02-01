@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  /* background: #030142; */
-  background-color: rgb(116, 219, 250);
+  background-image: url("../src/images/ms-g2cy1x.gif");
+  background-size: cover;
 }
 
 a {

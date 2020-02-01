@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import Navbar from './Navbar';
-import Container from './Container';
-import Footer from './Footer';
-import Banner from './Banner';
-import images from '../images';
+import React, { Component } from "react";
+import Navbar from "./Navbar";
+import Container from "./Container";
+import Footer from "./Footer";
+import Banner from "./Banner";
+import images from "../images";
 
 class ClickyGame extends Component {
   state = {
@@ -11,10 +11,10 @@ class ClickyGame extends Component {
     highScore: 0,
 
     // stores the class value to assign to navMessage based on a good or bad click
-    navMsgColor: '',
+    navMsgColor: "",
 
     // contains intro, success, and failure message
-    navMessage: 'Click an image to begin!',
+    navMessage: "Click an image to begin!",
 
     // contains an array of image urls
     allCharacters: this.shuffleArray(),
@@ -42,7 +42,9 @@ class ClickyGame extends Component {
     // gets a random index based off the current length of newArr
     // splices the value from newArr, and pushes it to shuffleArr
     while (newArr.length > 0) {
-      shuffleArr.push(newArr.splice(Math.floor(Math.random() * newArr.length), 1)[0]);
+      shuffleArr.push(
+        newArr.splice(Math.floor(Math.random() * newArr.length), 1)[0]
+      );
     }
 
     return shuffleArr;
@@ -81,8 +83,8 @@ class ClickyGame extends Component {
       return this.setState({
         score: score,
         highScore: highScore,
-        navMsgColor: 'incorrect',
-        navMessage: 'Incorrect guess!',
+        navMsgColor: "incorrect",
+        navMessage: "Incorrect guess!",
         allCharacters: shuffled,
         wasClicked: [],
         shake: true
@@ -93,15 +95,15 @@ class ClickyGame extends Component {
     this.setState({
       score: score,
       highScore: highScore,
-      navMsgColor: 'correct',
-      navMessage: 'You Guessed Correctly!',
+      navMsgColor: "correct",
+      navMessage: "You Guessed Correctly!",
       allCharacters: shuffled,
       wasClicked: prevState,
       shake: false
     });
 
     // removes the green correct indicator on a successful click after .5s to re-render the class on each success
-    return setTimeout(() => this.setState({ navMsgColor: '' }), 500);
+    return setTimeout(() => this.setState({ navMsgColor: "" }), 500);
   }
 
   // renders score to the navbar.
