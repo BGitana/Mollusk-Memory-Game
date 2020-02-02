@@ -22,12 +22,12 @@ npm start
 then navigate to 
 
 ```
-localhost:3000in browser
+localhost:3000 in browser
 ```
 
 ### What App Does
 
-**Mollusk-Memory-Game** is built with React.js. Thus, the application is component based, able to keeps track of change events using state, and updates to the page render dynamically and without page refresh. It track clicks and present the user with a score. The game will track each clicked image a user makes. If the same image is clicked twice the game will be reset. Each correct click increments the users score by 1. The highest score for the session is saved and displayed to the user.
+**Mollusk-Memory-Game** is built with React.js. Thus, the application is component based, able to keeps track of change events using state, and updates to the page render dynamically and without page refresh. It tracks clicks and presents the user with a score. The game will track each clicked image a user makes. If the same image is clicked twice the game will be reset. Each correct click increments the users score by 1. The highest score for the session is saved and displayed to the user.
 
 
 ### Tech Used
